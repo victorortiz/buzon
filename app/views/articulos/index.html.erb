@@ -1,4 +1,4 @@
-<h1>Listing articulos</h1>
+<h1>Listado de sugerencias</h1>
 
 <div class="row">
 <div class="large-12 columns">
@@ -7,7 +7,7 @@
 
 <%= text_field_tag :search, params[:search] %>
 
-<%= submit_tag 'Busqueda Articulo', :name => nil %>
+<%= submit_tag 'Busqueda sugerencias', :name => nil %>
 
 <% @busqueda.each do |s| %>
 
@@ -19,8 +19,8 @@
 <table>
   <tr>
     <th>Titulo</th>
-    <th>Cuerpo</th>
-    <th>Numero de Comentario</th>
+    <th>Descripción</th>
+    <th>Número de Comentario</th>
     <th></th>
     <th></th>
     <th></th>
@@ -33,7 +33,7 @@
     <td><%= articulo.comentarios.size %></td>
     <td><%= link_to 'Show', articulo %></td>
     <td><%= link_to 'Edit', edit_articulo_path(articulo) %></td>
-   <!-- <td><%= link_to 'Destroy', articulo, confirm: 'Are you sure?', method: :delete %></td>-->
+   <td><%= link_to 'Destroy', articulo, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -41,4 +41,4 @@
 <br />
 </div>
 </div>
-<%= link_to 'New Articulo', new_articulo_path %>
+<%= link_to 'Nueva sugerencia', new_articulo_path %>
